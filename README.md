@@ -2,6 +2,8 @@
 
 I trained two small object detectors, YOLOv8n and YOLO26n, on VisDrone (photos taken from drones) and compared them on three things: accuracy, the effect of image size, and speed after converting them to faster formats.
 
+Training curves: ![Weights & Biases Report](https://forge.coreweave.com/wandb/suryanshsinha01-na/VisDrone/reports/Training-and-Validation-Curves--VmlldzoxODI0NDU3Mw?accessToken=yppf9k57ixletl9e6j1k7i7h5y11z3az5zui7ghpcfdxsy19i6lpf676gqiirznn)
+
 ## At a glance
 
 | Model | Image size | mAP50-95 on test set (TensorRT) | Time per image (TensorRT) |
@@ -164,7 +166,7 @@ The `VisDrone.yaml` file in `dataset/` tells Ultralytics how to download VisDron
 
 ## Dataset and license
 
-VisDrone has 10 object types: pedestrian, people, bicycle, car, van, truck, tricycle, awning-tricycle, bus and motor. The validation set has 548 images and 38,759 objects. Cars (14,064) and pedestrians (8,844) dominate, while buses (251) and awning-tricycles (532) are rare.
+VisDrone has 10 object types: pedestrian, people, bicycle, car, van, truck, tricycle, awning-tricycle, bus and motor. The validation set has 548 images and 38,759 objects. Cars (14,064) and pedestrians (8,844) dominate, while buses (251) and awning-tricycles (532) are rare. The test set contains 1610 images with 75,102 instances in total.
 
 VisDrone is for academic and research use only, and models trained on it carry that restriction. This is a learning and portfolio project, not a commercial model. Ultralytics is released under the AGPL-3.0 license (or a paid commercial license).
 
