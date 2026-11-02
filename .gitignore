@@ -1,0 +1,18 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+.python-version
+
+# project files
+weights
+runs/
+*.pt
+pipeline_latency_results.json
+benchmark_results
