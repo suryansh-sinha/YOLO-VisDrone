@@ -164,7 +164,7 @@ The `VisDrone.yaml` file in `dataset/` tells Ultralytics how to download VisDron
 
 ## Dataset and license
 
-VisDrone has 10 object types: pedestrian, people, bicycle, car, van, truck, tricycle, awning-tricycle, bus and motor. The validation set has 548 images and 38,759 objects. Cars (14,064) and pedestrians (8,844) dominate, while buses (251) and awning-tricycles (532) are rare. The test-dev split used for the final accuracy numbers has [FILL: N] images and [FILL: N] objects.
+VisDrone has 10 object types: pedestrian, people, bicycle, car, van, truck, tricycle, awning-tricycle, bus and motor. The validation set has 548 images and 38,759 objects. Cars (14,064) and pedestrians (8,844) dominate, while buses (251) and awning-tricycles (532) are rare.
 
 VisDrone is for academic and research use only, and models trained on it carry that restriction. This is a learning and portfolio project, not a commercial model. Ultralytics is released under the AGPL-3.0 license (or a paid commercial license).
 
