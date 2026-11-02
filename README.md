@@ -2,7 +2,7 @@
 
 I trained two small object detectors, YOLOv8n and YOLO26n, on VisDrone (photos taken from drones) and compared them on three things: accuracy, the effect of image size, and speed after converting them to faster formats.
 
-Training curves: ![Weights & Biases Report](https://forge.coreweave.com/wandb/suryanshsinha01-na/VisDrone/reports/Training-and-Validation-Curves--VmlldzoxODI0NDU3Mw?accessToken=yppf9k57ixletl9e6j1k7i7h5y11z3az5zui7ghpcfdxsy19i6lpf676gqiirznn)
+Training curves: [Weights & Biases Report](https://forge.coreweave.com/wandb/suryanshsinha01-na/VisDrone/reports/Training-and-Validation-Curves--VmlldzoxODI0NDU3Mw?accessToken=yppf9k57ixletl9e6j1k7i7h5y11z3az5zui7ghpcfdxsy19i6lpf676gqiirznn)
 
 ## At a glance
 
