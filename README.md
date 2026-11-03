@@ -19,7 +19,7 @@ Accuracy is on the VisDrone test-dev split. Time is for one image at a time on a
 
 1. **Bigger input images help a lot.** Going from 640 to 960 pixels raised accuracy by about 5 points on the test set (about 7 points on the validation set) for both models. Drone images are full of tiny objects, so more pixels help.
 2. **YOLOv8n is slightly more accurate.** On the test set it leads by 0.5 points at 640 (inside my noise margin, so effectively a tie) and by 0.9 points at 960. On the validation set the lead is roughly 1 point at both sizes.
-3. **Converting to faster formats barely changes accuracy.** After converting to ONNX and TensorRT, scores stayed within 0.2 points of the original on the test set (0.31 on the validation set).
+3. **Converting to faster formats barely changes accuracy.** After converting to ONNX and TensorRT, scores stayed within 0.25 points of the original on the test set (0.31 on the validation set).
 4. **TensorRT is 2 to 3.3 times faster than PyTorch** for the whole detection process, one image at a time.
 5. **YOLO26n is faster than YOLOv8n only with TensorRT** (11 to 17% faster). It skips the step that removes duplicate boxes (called NMS), which saves about 0.26 ms per image, but its main network step takes about 0.1 ms longer. With ONNX Runtime the two models tie, and with PyTorch YOLOv8n is faster.
 6. **The trade-off:** with TensorRT on the test set, YOLO26n gives up about 0.4 points of accuracy at 640 pixels (within noise) for 17% more speed, and about 0.9 points at 960 pixels for 11% more speed. The 640 setting is the better deal.
@@ -30,7 +30,7 @@ Each setup was trained once. When I retrained YOLO26n, its score moved by about 
 
 **mAP** is the standard accuracy score for object detection (0 to 1, higher is better). mAP50 is the easier version. mAP50-95 is stricter, and it is the one I focus on.
 
-I picked each model's best checkpoint using the validation images, so validation scores are slightly optimistic. The **test-set numbers are the honest ones** and are the main results. The test set is the VisDrone test-dev split. I kept the validation tables for reference.
+I picked each model's best checkpoint using the validation images, so validation scores are slightly optimistic. The **test-set numbers are the unbiased ones** and are the main results. The test set is the VisDrone test-dev split. I kept the validation tables for reference.
 
 ### Accuracy (test set)
 

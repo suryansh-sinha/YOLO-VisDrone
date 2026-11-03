@@ -163,8 +163,8 @@ if RUN_SPEED:
                 del model
                 torch.cuda.empty_cache()
 
-    SAVE_PATH.write_text(
-        json.dumps(
+    with open(SAVE_PATH, "w") as f:
+        json.dump(
             {
                 "env": env,
                 "settings": {
@@ -172,13 +172,13 @@ if RUN_SPEED:
                     "iou": IOU,
                     "max_det": MAX_DET,
                     "batch": 1,
-                    "split": "val",
+                    "split": "val"
                 },
                 "results": results,
             },
-            indent=2,
+            f,
+            indent=4,
         )
-    )
 
     print(f"\nSaved to {SAVE_PATH}\n")
     # :<9 is left align in a field 9 characters wide. only affects terminal output xD I didnt know this earlier.
